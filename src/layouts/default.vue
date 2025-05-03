@@ -13,7 +13,6 @@ function leave(el: Element, done: () => void) {
     <div class="flex min-h-screen flex-col">
         <AppHeader />
         <Transition
-            appear
             class="mb-8"
             :css="false"
             mode="out-in"

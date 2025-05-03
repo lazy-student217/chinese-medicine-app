@@ -1,5 +1,5 @@
 <template>
-    <main class="px-6">
+    <main class="px-6 lg:px-10">
         <div class="mb-8">
             <h1
                 class="mb-2 text-center font-serif text-3xl font-bold text-green-900 text-shadow-black/15 text-shadow-sm lg:mb-6 lg:text-5xl"
@@ -22,5 +22,21 @@
                 立刻開始測試
             </NuxtLink>
         </div>
+        <section class="w-[50%] py-6">
+            <h2 class="font-bold font-serif lg:text-3xl text-2xl text-green-700 text-shadow-sm text-shadow-black/10 py-2">
+                尋找適合你的涼茶
+            </h2>
+            <p class="text-md py-3 lg:text-lg">
+                我們明白在眾多涼茶之中，要挑選出適合自己的涼茶猶如大海撈針。我們事先研究不同涼茶的性質、禁忌，再根據你的體質判斷適合你的涼茶。要是你想，到樓下的涼茶鋪喝上一碗推薦，有時間更可在家中用配方調製涼茶。
+            </p>
+        </section>
+        <section class="w-[50%] ml-auto text-right py-6">
+            <h2 class="font-bold font-serif lg:text-3xl text-2xl text-green-700 text-shadow-sm text-shadow-black/10 py-2">
+                仔細判定體質
+            </h2>
+            <p class="text-md py-3 lg:text-lg">
+                我們明白在眾多涼茶之中，要挑選出適合自己的涼茶猶如大海撈針。我們事先研究不同涼茶的性質、禁忌，再根據你的體質判斷適合你的涼茶。要是你想，到樓下的涼茶鋪喝上一碗推薦，有時間更可在家中用配方調製涼茶。
+            </p>
+        </section>
     </main>
 </template>
