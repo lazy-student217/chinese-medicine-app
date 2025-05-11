@@ -11,7 +11,8 @@
   in {
     devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [
-        bun
+        pnpm
+        nodejs_latest
       ];
     };
   };

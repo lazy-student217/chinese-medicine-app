@@ -1,0 +1,40 @@
+@import "@fontsource-variable/roboto";
+@import "@fontsource-variable/noto-sans-tc";
+@import "@fontsource-variable/noto-serif-tc";
+@import "tailwindcss";
+
+@keyframes sliding {
+    0% {
+        translate: 0 0;
+    }
+    100% {
+        translate: 600px 0;
+    }
+}
+
+@layer base {
+    :root {
+        --font-sans:
+            "Roboto Variable", "Noto Sans Tc Variable", "Roboto",
+            "Noto Sans Tc", "Ubuntu", "Inter", "Arial", sans-serif;
+        --font-serif:
+            "Noto Serif Tc Variable", "Noto Serif Tc", "Noto Serif HK",
+            "Noto Serif", "Georgia", "Times New Roman", "PMingLiu", "SimSun",
+            serif;
+    }
+}
+
+@layer components {
+    .sliding-rule {
+        @apply border-2 border-dashed border-green-800;
+        width: calc(100vw + 600px);
+        margin-left: -600px;
+        animation: 20s linear infinite normal sliding;
+    }
+
+    .hover-parent {
+        &:hover > .hover-child {
+            @apply text-green-800;
+        }
+    }
+}
