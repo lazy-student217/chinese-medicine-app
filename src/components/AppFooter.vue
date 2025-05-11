@@ -34,8 +34,8 @@ onUnmounted(() => {
         class="flex-shrink overflow-x-hidden rounded-t-lg bg-linear-65 from-green-800 to-lime-900 box-decoration-slice py-2 text-center text-sm text-gray-200 mt-auto"
     >
         <div class="font-bold">涼茶體質匹配助手</div>
-        <Transition class="opacity-0" :css="false" @enter="enter" @leave="leave" type="transition" mode="out-in">
-            <p class="mx-auto inline-block h-fit w-fit " :key="currentIndex">
+        <Transition :css="false" @enter="enter" @leave="leave" type="transition" mode="out-in">
+            <p class="mx-auto inline-block h-fit w-fit" :key="currentIndex">
                 {{ footerTexts[currentIndex] }}
             </p>
         </Transition>

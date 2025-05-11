@@ -11,11 +11,8 @@ const questionEl = useTemplateRef("question");
 const questionTextEl = useTemplateRef("questionText");
 
 const colorClasses = [
-    "bg-green-400",
+    "bg-red-500",
     "bg-green-500",
-    "bg-green-600",
-    "bg-green-700",
-    "bg-green-800",
 ];
 
 const { question } = defineProps<Props>();
@@ -31,9 +28,19 @@ function moveToQuestion() {
     }, 400);
 }
 
+function answerQuestion(i: number) {
+    if (answer.value !== i) {
+        answer.value = i;
+    } else {
+        answer.value = undefined;
+    }
+
+}
+
 defineExpose({
     answer,
     moveToQuestion,
+    answerQuestion,
 });
 </script>
 
@@ -43,10 +50,10 @@ defineExpose({
             question
         }}</span>
         <div class="flex flex-row py-2">
-            <template v-for="i in 5" :key="i">
+            <template v-for="i in 2" :key="i">
                 <button
-                    @click="answer = i"
-                    class="mx-3 cursor-pointer rounded-full border-2 p-3 transition-all lg:mx-4 lg:p-4"
+                    @click="answerQuestion(i)"
+                    class="mx-6 cursor-pointer rounded-full border-2 p-4 transition-all lg:mx-12 lg:p-5"
                     :class="answer === i ? colorClasses[i - 1] : ''"
                 ></button>
             </template>
