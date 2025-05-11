@@ -14,6 +14,7 @@ export default defineNuxtConfig({
             crawlLinks: true,
         },
     },
+
     vite: {
         plugins: [tailwindcss()],
     },
@@ -21,6 +22,7 @@ export default defineNuxtConfig({
         provider: "ipx",
     },
     app: {
+        baseURL: "/chinese-medicine-app/",
         head: {
             title: "涼茶體質匹配助手",
             htmlAttrs: {
