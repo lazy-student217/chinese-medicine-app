@@ -62,5 +62,11 @@
                 >
             </p>
         </section>
+
+        <NuxtLink
+            to="/about"
+            class="w-fit mx-auto my-6 block font-serif text-xl font-bold text-green-800 lg:text-2xl underline"
+            >瞭解更多這個網站</NuxtLink
+        >
     </main>
 </template>

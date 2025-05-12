@@ -14,7 +14,7 @@
             ],
             "mental": "性格隨和開朗。",
             "common_symptom": "平素患病較少。",
-            "liangcha": [1]
+            "liangcha": [1, 10, 11]
         },
         {
             "id": 2,
@@ -95,7 +95,7 @@
             ],
             "mental": "性格多急躁易怒。",
             "common_symptom": "易患瘡癤、黃疸、火熱等病症。",
-            "liangcha": [6]
+            "liangcha": [6,12]
         },
         {
             "id": 7,

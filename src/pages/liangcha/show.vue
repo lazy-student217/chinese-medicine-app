@@ -19,14 +19,14 @@ try {
     }
     for (const id of unverified_list.map((s) => Number.parseInt(s))) {
         if (
-            !(Number.isInteger(id) && !Number.isNaN(id) && 1 <= id && id <= 9)
-        ) {
+            !(Number.isInteger(id) && !Number.isNaN(id) && liangcha_data.liangcha.length >= id && id >= 1)
+        ) { 
             throw Error();
         }
     }
     list = unverified_list.map((s) => Number.parseInt(s));
 } catch {
-    navigateTo("/liangcha");
+    navigateTo({ path: "/liangcha", replace: true });
 }
 </script>
 <template>

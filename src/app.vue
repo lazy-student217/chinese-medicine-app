@@ -25,7 +25,7 @@ useHead({
         {
             rel: "icon",
             type: "image/x-icon",
-            href: "images/favicon.svg",
+            href: `/images/favicon.svg`,
         },
     ],
 });
