@@ -14,7 +14,7 @@ onMounted(() => {
         <div ref="header" class="opacity-0">
             <NuxtLink to="/" class="hover-parent mx-2 block cursor-pointer">
                 <NuxtImg
-                    src="/images/favicon.svg"
+                    src="images/favicon.svg"
                     alt="Icon"
                     class="inline h-12 w-12"
                     preload
