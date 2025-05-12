@@ -27,7 +27,7 @@ try {
     }
     list = unverified_list.map((s) => Number.parseInt(s));
 } catch {
-    navigateTo("/physiques");
+    navigateTo({ path: "/physiques", replace: true });
 }
 
 function get_liangcha_query(id: number) {
@@ -49,6 +49,18 @@ function get_physique_name() {
                 {{ get_physique_name() }}</span
             >。
         </div>
+        <section
+            class="py-4 text-center text-base text-gray-600/90 text-shadow-2xs text-shadow-black/15 lg:text-xl"
+        >
+            以上只是初步分析用户體質，並非專業人士意見。<br />
+            如對自身體質有任何疑問，<br />
+            請務必向註冊中醫師尋求專業意見。<br />
+            詳情請看<NuxtLink
+                href="/about"
+                class="underline transition-all text-gray-700/90 hover:text-green-700"
+                >此頁面</NuxtLink
+            >。
+        </section>
         <section class="p-5" v-for="id in list">
             <h1 class="my-4 font-serif text-3xl font-bold text-green-800">
                 {{ physiques_data.physiques[id - 1].name }}（{{

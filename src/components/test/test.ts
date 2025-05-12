@@ -43,7 +43,7 @@ export function testDone(questions: (Question | null)[]) {
     if (physiques.length == 0) {
         physiques.push(1);
     }
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
     navigateTo({
         path: "/physiques/show",
         query: {
