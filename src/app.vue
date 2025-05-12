@@ -16,6 +16,8 @@ function leave(el: Element, done: () => void) {
     animate(el, { opacity: [1, 0] }, { duration: 0.3 }).then(done);
 }
 
+const config = useRuntimeConfig();
+
 useHead({
     title: "涼茶體質匹配助手",
     htmlAttrs: {
@@ -25,7 +27,7 @@ useHead({
         {
             rel: "icon",
             type: "image/x-icon",
-            href: `/images/favicon.svg`,
+            href: `${config.app.baseURL}images/favicon.svg`,
         },
     ],
 });
