@@ -22,7 +22,6 @@ export default defineNuxtConfig({
         provider: "ipx",
     },
     app: {
-        baseURL: "/chinese-medicine-app/",
         head: {
             title: "涼茶體質匹配助手",
             htmlAttrs: {
@@ -31,7 +30,7 @@ export default defineNuxtConfig({
             link: [
                 {
                     rel: "icon",
-                    type: "image/svg+xml",
+                    type: "image/x-icon",
                     href: "/images/favicon.svg",
                 },
             ],
