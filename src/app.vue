@@ -16,13 +16,28 @@ function leave(el: Element, done: () => void) {
     animate(el, { opacity: [1, 0] }, { duration: 0.3 }).then(done);
 }
 
-
+useHead({
+    title: "涼茶體質匹配助手",
+    htmlAttrs: {
+        lang: "zh-HK",
+    },
+    link: [
+        {
+            rel: "icon",
+            type: "image/x-icon",
+            href: "~/images/favicon.ico",
+        },
+    ],
+});
 </script>
 <template>
-    <NuxtLayout><NuxtPage :transition="{
-    name: 'fade',
-    mode: 'out-in',
-    onEnter: enter,
-    onLeave: leave,
-}"/></NuxtLayout>
+    <NuxtLayout
+        ><NuxtPage
+            :transition="{
+                name: 'fade',
+                mode: 'out-in',
+                onEnter: enter,
+                onLeave: leave,
+            }"
+    /></NuxtLayout>
 </template>

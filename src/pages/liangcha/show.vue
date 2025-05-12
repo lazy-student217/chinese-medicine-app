@@ -26,7 +26,7 @@ try {
     }
     list = unverified_list.map((s) => Number.parseInt(s));
 } catch {
-    navigateTo("/physiques");
+    navigateTo("/liangcha");
 }
 </script>
 <template>

@@ -33,12 +33,27 @@ try {
 function get_liangcha_query(id: number) {
     return physiques_data.physiques[id - 1].liangcha.join(",");
 }
+
+function get_physique_name() {
+    let physique_set = new Set(list);
+    return physiques_data.physiques
+        .filter((physique) => physique_set.has(physique.id))
+        .map((physique) => `${physique.name}（${physique.ty_name}）`)
+        .join("，");
+}
 </script>
 <template>
     <main>
+        <div class="text-center text-xl lg:text-2xl" v-if="is_test_result">
+            你的體質是<span class="font-bold text-green-900">
+                {{ get_physique_name() }}</span
+            >。
+        </div>
         <section class="p-5" v-for="id in list">
             <h1 class="my-4 font-serif text-3xl font-bold text-green-800">
-                {{ physiques_data.physiques[id - 1].name }}
+                {{ physiques_data.physiques[id - 1].name }}（{{
+                    physiques_data.physiques[id - 1].ty_name
+                }}）
             </h1>
             <h2 class="my-2 font-serif text-2xl font-bold">形體特徵</h2>
             <span class="my-4 text-lg">
@@ -63,7 +78,10 @@ function get_liangcha_query(id: number) {
             >
             <h2 class="my-2 font-serif text-2xl font-bold">推薦涼茶</h2>
             <NuxtLink
-                :to="{path: '/liangcha/show', query: { list: get_liangcha_query(id) } }"
+                :to="{
+                    path: '/liangcha/show',
+                    query: { list: get_liangcha_query(id) },
+                }"
                 class="my-2 block font-serif text-xl font-bold text-green-800"
                 >查看推薦涼茶</NuxtLink
             >

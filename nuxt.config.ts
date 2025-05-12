@@ -21,19 +21,4 @@ export default defineNuxtConfig({
     image: {
         provider: "ipx",
     },
-    app: {
-        head: {
-            title: "涼茶體質匹配助手",
-            htmlAttrs: {
-                lang: "zh-HK",
-            },
-            link: [
-                {
-                    rel: "icon",
-                    type: "image/x-icon",
-                    href: "/images/favicon.svg",
-                },
-            ],
-        },
-    },
 });

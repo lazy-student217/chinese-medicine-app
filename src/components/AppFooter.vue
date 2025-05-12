@@ -2,7 +2,7 @@
 import { animate } from "motion";
 
 const footerTexts = [
-    "以MIT特許條款授權",
+    "所有程式碼（連圖標）以MIT特許條款授權",
     "源代碼請見Github",
     "為2024/25「心繫家國」中醫學寶庫探究比賽設計",
     "Website By LazyStudent217",
