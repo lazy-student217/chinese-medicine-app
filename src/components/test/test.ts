@@ -1,12 +1,11 @@
 interface Question {
-    answer?: number;
+    answer?: boolean;
     moveToQuestion: () => void;
 }
 
 export const storage_key = "physique-test-answers";
 
 export function testDone(questions: (Question | null)[]) {
-    const yes = 2;
     const left_question = questions.find(
         (question) => question!.answer === undefined,
     );
@@ -15,7 +14,7 @@ export function testDone(questions: (Question | null)[]) {
         return;
     }
     const get_answer = (indices: number[]) =>
-        indices.every((i) => questions[i - 1]!.answer! === yes);
+        indices.every((i) => questions[i - 1]!.answer!);
     const physiques: number[] = [];
     if (get_answer([1, 4, 11])) {
         physiques.push(2);

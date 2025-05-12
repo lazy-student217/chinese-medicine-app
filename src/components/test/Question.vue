@@ -5,15 +5,10 @@ interface Props {
     question: string;
 }
 
-const answer = ref<number | undefined>(undefined);
+const answer = ref<boolean | undefined>(undefined);
 
 const questionEl = useTemplateRef("question");
 const questionTextEl = useTemplateRef("questionText");
-
-const colorClasses = [
-    "bg-red-500",
-    "bg-green-500",
-];
 
 const { question } = defineProps<Props>();
 
@@ -28,13 +23,12 @@ function moveToQuestion() {
     }, 400);
 }
 
-function answerQuestion(i: number) {
+function answerQuestion(i: boolean) {
     if (answer.value !== i) {
         answer.value = i;
     } else {
         answer.value = undefined;
     }
-
 }
 
 defineExpose({
@@ -50,13 +44,20 @@ defineExpose({
             question
         }}</span>
         <div class="flex flex-row py-2">
-            <template v-for="i in 2" :key="i">
-                <button
-                    @click="answerQuestion(i)"
-                    class="mx-6 cursor-pointer rounded-full border-2 p-4 transition-all lg:mx-12 lg:p-5"
-                    :class="answer === i ? colorClasses[i - 1] : ''"
-                ></button>
-            </template>
+            <button
+                @click="answerQuestion(true)"
+                class="mx-6 cursor-pointer rounded-full border-2 text-center transition-all lg:mx-12 h-14 w-14"
+                :class="answer === true ? 'bg-green-500' : ''"
+            >
+                是
+            </button>
+            <button
+                @click="answerQuestion(false)"
+                class="mx-6 cursor-pointer rounded-full border-2 h-14 w-14 text-center transition-all lg:mx-12"
+                :class="answer === false ? 'bg-red-500' : ''"
+            >
+                否
+            </button>
         </div>
     </div>
 </template>

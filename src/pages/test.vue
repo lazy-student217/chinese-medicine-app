@@ -29,7 +29,7 @@ const questions = useTemplateRef("question");
 let should_save = ref(true);
 
 function save() {
-    if (should_save) {
+    if (should_save.value) {
         const answer_text = JSON.stringify(
             questions.value!.map((question) => question!.answer),
         );
@@ -55,11 +55,7 @@ onMounted(() => {
             return;
         }
         for (const [i, answer] of answers.entries()) {
-            if (
-                answer !== null &&
-                Number.isInteger(answer) &&
-                (answer == 1 || answer == 2)
-            ) {
+            if (answer === true || answer === false) {
                 questions.value![i]?.answerQuestion(answer);
             }
         }
@@ -83,10 +79,6 @@ onBeforeRouteLeave(() => {
             class="pt-1 pb-6 text-center text-base text-gray-600/90 text-shadow-2xs text-shadow-black/15 lg:text-xl"
         >
             用數分鐘完成測試，了解你的體質。
-            <br />
-            是：點擊右邊的按鈕
-            <br />
-            否：點擊左邊的按鈕
         </p>
 
         <TestQuestion
