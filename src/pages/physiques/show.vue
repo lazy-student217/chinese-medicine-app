@@ -80,10 +80,6 @@ function get_physique_name() {
                     {{ expression }}
                 </li>
             </ul>
-            <h2 class="my-2 font-serif text-2xl font-bold">心理特徵</h2>
-            <span class="my-4 text-lg">
-                {{ physiques_data.physiques[id - 1].mental }}</span
-            >
             <h2 class="my-2 font-serif text-2xl font-bold">常見症狀</h2>
             <span class="my-4 text-lg">
                 {{ physiques_data.physiques[id - 1].common_symptom }}</span
@@ -94,7 +90,7 @@ function get_physique_name() {
                     path: '/liangcha/show',
                     query: { list: get_liangcha_query(id) },
                 }"
-                class="my-2 block font-serif text-xl font-bold text-green-800"
+                class="my-2 block font-serif text-xl underline font-bold text-green-800"
                 >查看推薦涼茶</NuxtLink
             >
         </section>

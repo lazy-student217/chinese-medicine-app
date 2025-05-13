@@ -28,4 +28,9 @@ export const referneces: Refernence[] = [
         name: "東華三院上醫館〈中醫九種體質分類〉",
         link: "https://www.tungwah.org.hk/upload/Medical/Constitution_Types.pdf",
     },
+    {
+        type: "link",
+        name: "Yahoo新聞「消暑飲品〡夏天消暑解熱唔一定飲可樂食雪糕！ 5款超易DIY中式涼茶推介（附配方做法）」",
+        link: "https://hk.news.yahoo.com/%E6%B6%88%E6%9A%91-%E9%A3%B2%E5%93%81-%E5%A4%8F%E5%A4%A9-%E9%A3%9F%E8%AD%9C-%E8%87%AA%E8%A3%BD-%E8%A7%A3%E7%86%B1-%E6%B6%BC%E8%8C%B6-%E6%8E%A8%E4%BB%8B-235113472.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAGZ-QA88eMhuLxx2cxTEpnsfTbip-YbhXoZv-FuxNnWa1osdyxnSbwoG-uTLzB0unJOhCXu8THuRgcbADDHEv3lrPxx9D1v8JIIP8uTACj_ne5t53NygYZQC5TzLdM_eZLUX-YFeBeH5FgTuPYhJoYApLkLqET-lWhWCskvLa5qa",
+    }
 ];

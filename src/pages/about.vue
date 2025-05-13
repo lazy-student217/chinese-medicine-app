@@ -64,6 +64,7 @@ import { referneces } from "~/components/referneces";
                         :to="reference.link"
                         external
                         class="underline"
+                        target="_blank"
                         v-if="reference.type === 'link'"
                     >
                         {{ reference.name }}
@@ -76,6 +77,7 @@ import { referneces } from "~/components/referneces";
                 Sans TC及Roboto。開放源代碼於<NuxtLink
                     to="https://github.com/lazy-student217/chinese-medicine-app"
                     external
+                    target="_blank"
                     class="underline"
                     >Github平臺</NuxtLink
                 >。任何使用上的問題請於Issue處反映。
