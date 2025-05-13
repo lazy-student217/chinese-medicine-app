@@ -22,16 +22,6 @@
                 立刻開始測試
             </NuxtLink>
         </div>
-        <section class="w-[75%] py-6 lg:w-[50%]">
-            <h2
-                class="py-2 font-serif text-2xl font-bold text-green-700 text-shadow-black/10 text-shadow-sm lg:text-3xl"
-            >
-                尋找適合你的涼茶
-            </h2>
-            <p class="py-3 text-base lg:text-lg">
-                我們明白在眾多涼茶之中，要挑選出適合自己的涼茶猶如大海撈針。我們事先研究不同涼茶的性質、禁忌，再根據你的體質判斷適合你的涼茶。要是你想，到樓下的涼茶鋪喝上一碗推薦，有時間更可在家中用配方調製涼茶。
-            </p>
-        </section>
         <section class="ml-auto w-[75%] py-6 text-right lg:w-[50%]">
             <h2
                 class="py-2 font-serif text-2xl font-bold text-green-700 text-shadow-black/10 text-shadow-sm lg:text-3xl"
