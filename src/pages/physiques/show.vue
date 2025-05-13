@@ -80,10 +80,6 @@ function get_physique_name() {
                     {{ expression }}
                 </li>
             </ul>
-            <h2 class="my-2 font-serif text-2xl font-bold">心理特徵</h2>
-            <span class="my-4 text-lg">
-                {{ physiques_data.physiques[id - 1].mental }}</span
-            >
             <h2 class="my-2 font-serif text-2xl font-bold">常見症狀</h2>
             <span class="my-4 text-lg">
                 {{ physiques_data.physiques[id - 1].common_symptom }}</span
