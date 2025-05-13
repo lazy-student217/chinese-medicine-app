@@ -90,7 +90,7 @@ function get_physique_name() {
                     path: '/liangcha/show',
                     query: { list: get_liangcha_query(id) },
                 }"
-                class="my-2 block font-serif text-xl font-bold text-green-800"
+                class="my-2 block font-serif text-xl underline font-bold text-green-800"
                 >查看推薦涼茶</NuxtLink
             >
         </section>

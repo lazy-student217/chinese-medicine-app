@@ -21,15 +21,13 @@ import liangcha_data from "~/components/liangcha/liangcha.json";
         <div class="my-8 grid grid-cols-3 grid-rows-3 lg:mx-auto lg:w-[40%]">
             <NuxtLink
                 v-for="liangcha in liangcha_data.liangcha"
-                class="m-2 block rounded-md border-2 border-black p-6 transition-all bg-white hover:bg-emerald-100 ease-in"
+                class="m-2 flex items-center justify-center rounded-md border-2 border-black bg-white p-6 transition-all ease-in hover:bg-emerald-100"
                 :to="{
                     path: '/liangcha/show',
                     query: { list: `${liangcha.id}` },
                 }"
             >
-                <p
-                    class="text-center font-serif text-xl font-bold text-green-900"
-                >
+                <p class="text-center font-serif text-xl font-bold text-green-900">
                     {{ liangcha.name }}
                 </p>
             </NuxtLink>
